@@ -50,7 +50,7 @@ If you want to run this app in your Django project , follow [add to your project
 
   ```source venv/bin/activate```
   
-- or
+- in WINDOWS
 
   ```cd venv/bin/; ./activate```
   
