@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'chat/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'chat/codepen/style.css' %}">           -->
+    
+       
+    <!-- <script  src="{% static 'chat/codepen/script.js' %}"></script> -->
+    
+    
+
+    <title>HOME PAGE 😌</title>
+</head>
+
+
+
+<body class="container-fluid mt-4" >
+
+
+
+  {%if user.is_authenticated %}
+    Hello {{user.username}}🐛
+  
+  
+    <a class="btn btn-outline-success mr-1 " style="float: right" href="{%url 'chat:logout' %}">LogOut</a>
+    <a class="btn btn-outline-success " href="{% url 'chat:create' %}">Create Post</a>
+    <a class="btn btn-outline-success" href="{% url "chat:password_change" %}">password reset</a>
+    <hr>
+
+
+
+
+<p>in this page you will see the posts.</p>
+<h1>Posts</h1>
+{%for post in posts %}
+<li><a href="{%url 'chat:details'  pk=post.pk%}">{{post.title}}</a><br></li>
+{%endfor%}
+   
+
+    {%else%}
+    <a class="btn btn-outline-success"
+    style="float: right"href="{%url 'chat:auth' %}">login</a>  
+  
+  
+  
+
+
+<script  src="{% static 'chat/codepen/script.js' %}"></script> 
+  
+{%endif%}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ 
