@@ -30,19 +30,14 @@ urlpatterns = [
     path('update/<int:pk>',Postupdate.as_view(),name= 'postupdate'),    
     path('delete/<int:pk>',Postdelete.as_view(),name = 'deletepost'),
 
-    # path('accounts/',include('django.contrib.auth.urls')), 
+    path('accounts/',include('django.contrib.auth.urls')), 
     # path('logout/',
     #     auth_views.LogoutView.as_view(next_page = reverse_lazy('chat:home')),name = 'logout'),
-            
-            
+          
     path("accounts/password_change",auth_views.PasswordChangeView.as_view(
         success_url=reverse_lazy("chat:password_change_done")
-    ),name="password_change"),
-    
-    path("accounts/password_change",auth_views.PasswordChangeView.as_view(
-        success_url=reverse_lazy("chat:password_change_done")
-    ),name="password_reset"),
-
+    ),name="password_change"),   
+     
     path('notfound/',someview),
     path("register/",register,name="reg"),
     path("login/",authenticating,name="auth"),

@@ -19,6 +19,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login
 from django.conf import settings
+from django.contrib.auth.models import User
 
 
 
@@ -93,7 +94,7 @@ from django.conf import settings
 
 # ------------------------------------------------------------------#
 
-class Postlist(LoginRequiredMixin,ListView):
+class Postlist(ListView):
     
     model = Post
     template_name = 'chat/home.html'
@@ -101,7 +102,7 @@ class Postlist(LoginRequiredMixin,ListView):
     
 
     def get_queryset(self):
-        username = self.request.user.username        
+        username = self.request.user              
         return User.objects.get(username = username).post_set.all()
     
     
@@ -186,7 +187,8 @@ def register(request):
             user = userinfoo.save(commit=False)            
             user.set_password(user.password)
             user.save()
-            return HttpResponseRedirect(reverse("chat:home"))
+            # return HttpResponseRedirect(reverse("chat:auth"))
+            return authenticating(request)
 
 
     else:
@@ -222,7 +224,7 @@ def authenticating(request):
                 return HttpResponse("there is no {} account on this website".format(username)) 
             
 
-    else:        
+    else: 
         userinfoo = Userinfo()
         context = {
             "userinfoo":userinfoo,
