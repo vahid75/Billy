@@ -235,9 +235,6 @@ def authenticating(request):
 
 
 
-# def logout_then_login(request):
-#     return super().logout_then_login()
-
 def logoutnlogin(request):
     """
     Logout n login back
