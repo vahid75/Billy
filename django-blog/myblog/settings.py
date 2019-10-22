@@ -127,5 +127,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# LOGIN_REDIRECT_URL = "/chat/home"
+##LOGIN_REDIRECT_URL = "/chat/home"
 LOGOUT_REDIRECT_URL = "/chat/home"
