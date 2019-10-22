@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .vscode/
 Python Django Full.Stack Web Developer/
 beston/
@@ -14,6 +15,9 @@ q-1.py
 svg-login-form.zip
 svg-login-form/
 venv/
-django-blog/db.sqlite3
 
 
+
+=======
+db.sqlite3
+>>>>>>> 8421d57c8e666fd21acdab5baad0daa24b40978e
