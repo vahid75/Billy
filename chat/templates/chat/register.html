@@ -1,0 +1,47 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">  
+<link rel="stylesheet" href="{% static 'chat/login.css' %}" >  <title>register 🐒</title>
+
+</head>
+<body>
+        
+        
+      
+        
+        
+        
+        <div class="cont">
+          
+          <div class="form">
+                <h1>Register</h1>
+                <form class="login-form" action="" method="POST">
+                    
+                    {% csrf_token %}
+                    {{userinfoo.email.errors}}
+                    {{userinfoo.email}}
+
+              
+                     {{userinfoo.username.errors}}
+                     {{userinfoo.username}}
+        
+                     
+              
+                     {{userinfoo.password.errors}}
+                     {{userinfoo.password}}
+        
+        
+              <button type=submit class="login">Register</button>
+              <a href="{% url 'auth' %}">Login</a>
+  
+            </form>        
+            
+          
+          
+          
+        </div>
+       
+</body>
+</html>

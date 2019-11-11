@@ -1,0 +1,27 @@
+.mode html
+.headers on
+.output user_dump.html
+select * from auth_user;
+exit;
+
+styles for the tables:
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+and the <table></table> elements shoud included.

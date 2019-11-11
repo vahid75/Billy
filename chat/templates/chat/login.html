@@ -1,0 +1,62 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>HOME 🐒</title>
+  <link rel="stylesheet" href="{%static 'chat/login.css' %}">
+
+</head>
+<body id="login">
+
+
+<!-- partial:index.partial.html -->
+
+{%block login%}
+<!-- padding-bottom:70px -->
+<div class="cont" style=" ;">
+  
+  <div class="form">
+      
+        <form class="login-form" action="" method="POST">
+            {% csrf_token %}
+            <h1>Login</h1>
+      <!-- <input type="text"
+             class="user"
+             placeholder="Username"/> -->
+             
+                  <strong>{{userinfoo.username.errors}}</strong>
+                  {{userinfoo.username}}
+                 
+             
+
+      
+      <!-- <input type="password" 
+             class="pass"
+             placeholder="Password"/> -->
+             {{userinfoo.password.errors}}
+            
+             {{userinfoo.password}}
+
+           
+             
+            
+
+      <button type=submit class="login">Login</button>
+    </form>
+    
+    <a href="{% url 'chat:reg' %}">Dont have a account?</a>
+  </div>
+  
+  
+  
+</div>
+{%endblock%}
+</body>
+</html>
+
+
+  
+  

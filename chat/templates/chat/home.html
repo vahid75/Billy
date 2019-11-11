@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>HOME PAGE 😌</title>
+  <meta charset="UTF-8">
+   
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    
+    
+  <link rel="stylesheet" href="{%static 'chat/home_style.css' %}">
+    
+    
+    
+    
+<!--     
+    <script>
+    $(document).ready(function(){        
+            $('#myModal').modal('show');
+    }); 
+    </script> -->
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway|Yeon+Sung&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body class="container-fluid mt-4"  >
+
+
+
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <h4 class="modal-title">Welcome</h4>
+        </div>
+        <div class="modal-body">
+          <p>in this page you will see all posts you have ever created.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+    
+    
+
+  {%if user.is_authenticated %}
+  
+    
+  
+
+     
+      
+
+
+      
+
+       
+      
+
+<!-- ---------------- Navbar --------------------->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-radius: 8px">
+          <a class="navbar-brand" href="{%url 'chat:home' %}">Hi {{user.username}}🐛</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              
+               <!-- password butts and create post -->
+                <li class="nav-item ">
+                    
+                        <a class="nav-link" href="{% url 'chat:create' %}">Create Post</a>
+                    
+                </li>
+    
+                <li class="nav-item ">
+                    
+                        <a class="nav-link" href="{% url 'chat:password_change' %}">password reset</a>
+                    
+                </li>
+<!-- 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+
+              <!--search box and its button -->
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="{% url 'search:search' %}" method="GET">
+              <input class="form-control mr-sm-2" type="search" name = "q" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>            
+            </form>
+            
+          <div class="nav-item ">
+              
+                  <a class="btn btn-outline-success nav-link ml-lg-5"  href="{%url 'chat:logout' %}">LogOut</a>
+              
+            </div>
+
+          </div>
+        </nav>
+      
+
+      
+
+      
+    
+    <hr>
+{%block details%}
+{%endblock details%}
+
+
+
+
+
+
+
+
+
+
+
+{%if view.template_name == "chat/home.html"  %}
+<div class="vb " id="home-post-heading">Posts
+</div>
+{%endif%}
+
+{%for post in posts %}
+
+
+
+<div class="vl pl-1 ">
+<li id="post-list"><a  href="{{post.get_absolute_url}}">{{post.title}}</a><br></li>
+</div>
+{%endfor%}
+
+
+    {%else%}
+    <a class="btn btn-outline-success"
+    style="float: right"href="{%url 'chat:auth' %}">login</a>  
+  
+  
+
+
+    <script>
+      $(document).ready(function(){        
+ $('#myModal').modal('show');
+  }); 
+  </script>
+    
+<!-- <script  src="{% static 'chat/codepen/script.js' %}"></script>  -->
+
+
+  
+{%endif%}
+
+<div  id="recent_posts" >
+    <hr>
+  <div  class="vl mb-5 pt-1 pl-1" id="recent_posts-heading">
+    <p>Recent posts by other users :</p>
+  </div>
+
+{%load tags %}
+    {% latest_post_tag %}
+        {%for item in latest_posts%}
+        
+        
+          <a href="{{item.get_absolute_url}}">{{item.title}}</a>  , posted {{ item.creation_date|timesince }} ago. By <b>{{item.author}}</b> <br>
+          <hr> 
+
+        {%endfor%}
+
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ 

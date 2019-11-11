@@ -1,0 +1,288 @@
+@media only screen and (max-width: 303px) {
+
+  #post-list{
+    
+    margin-left: 0px;
+    font-size: 17px  ;
+    list-style-type: none;
+
+  }
+  
+  .vl{
+    border-left: 4px solid green;
+    
+    margin-bottom: 14px 
+  }
+  
+  .vb{
+    border-bottom: 4px solid green;
+    width: 60px;
+    margin-bottom: 2rem;     
+  }
+  #CBV .vb{
+    border-bottom: 4px solid green;
+    width: 95%;
+    margin-bottom: 2rem;     
+  }
+
+  #home-post-heading{
+    
+    font-size: 2rem;  
+  }  
+  
+  #post-title{
+    margin-bottom: 1rem; 
+    font-size: 1.2rem;   
+    }
+
+    #detail-body{
+      /* margin-right:auto;
+      margin-left: auto;
+      text-align: center; */
+      padding-left: 0.8rem;
+      padding-right: 1rem; 
+      margin-right: -40px;
+      margin-left: -40px;
+    }
+
+    #detail-body{
+      padding-left: 3rem;
+      padding-right: 3rem;
+      
+      font-size: 20px;
+      font-weight:500
+    }
+
+ 
+  #recent_posts-heading{
+    
+    font-size: 25px;
+    font-size: 1.5rem;  
+    margin-top: 36px;
+    
+
+  }
+
+  #recent_posts {
+    line-height:33px;
+    
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  #post-author,#creation_date{
+    font-size: 1.3rem;
+    font-weight: 400;
+  } 
+  
+  
+}
+
+
+
+
+@media only screen and (max-width: 510px) and  (min-width:303px ) {
+             
+  
+        .vl{
+          border-left: 4px solid green;
+          /* height: 1.5rem; */
+          margin-bottom: 1rem;
+        } 
+        
+        .vb{
+          border-bottom: 4px solid green;
+          width: 60px;
+          margin-bottom: 2rem;     
+        }
+        #CBV .vb{
+          border-bottom: 4px solid green;
+          width: 87%;
+          margin-bottom: 2rem;     
+        }
+
+        /* .body_html{
+          /* margin-right: -30px;
+          margin-left: -30px; */
+       
+        
+        #post-list{
+          
+          margin-left: 0px;
+          font-size: 18px  ;
+          list-style-type: none;
+          
+
+        }  
+
+        #detail-body{
+          /* margin-right:auto;
+          margin-left: auto;
+          text-align: center; */
+          padding-left: 0.8rem;
+          padding-right: 1rem; 
+          margin-right: -40px;
+          margin-left: -40px;
+        }
+
+        #detail-body{
+          padding-left: 3rem;
+          padding-right: 3rem;
+          
+          font-size: 20px;
+          font-weight:500
+        }
+
+       
+
+    #post-title{
+      margin-bottom: 1rem; 
+      font-size: 1.3rem;    
+      
+    }
+    
+    #post-author,#creation_date{
+      font-size: 24px;
+      font-weight: 400;
+    } 
+
+
+
+    #recent_posts-heading{
+      
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    #recent_posts {
+      line-height:33px;
+      
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+   
+  }
+
+/* ***************************-----------------******************************* */
+@media only screen and (max-width: 1900px) and (min-width: 510px) {
+  #home-post-heading{
+    
+    font-size: 33px ;
+    
+     
+    
+  }  
+  
+  #post-list{
+    
+    margin-left: 20px;
+    font-size: 27px  ;
+    list-style-type: none;
+
+  }  
+  
+
+  .vl{
+      border-left: 4px solid green;
+      margin-bottom: 5px ;
+      
+      /* margin-left: 20px */
+    }
+    .vb{
+      border-bottom: 4px solid green;
+      width: 60px;
+      margin-bottom: 2rem;     
+    }
+    #CBV .vb{
+      border-bottom: 4px solid green;
+      width: 23%;
+      margin-bottom: 2rem;     
+    }
+
+  
+    #post-title{
+      line-height: 40px;
+      font-size: 1.6rem
+
+      
+    }
+
+
+    #detail-body{
+      padding-left: 3rem;
+      padding-right: 3rem;
+      
+      font-size: 20px;
+      font-weight:500
+    }
+
+
+    
+    
+
+    
+    #post-author,#creation_date{
+      font-size: 24px;
+      font-weight: 400;
+    } 
+
+    
+    #recent_posts{
+      
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 10px;
+    }
+    #recent_posts-heading{
+      
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 30px
+    }
+
+
+
+}
+/* ******************* end of media queries ******************* */
+
+
+
+#home-post-heading{
+  font-family: 'Open Sans Condensed', sans-serif; 
+  font-size: 2rem;
+} 
+
+
+#post-author,#creation_date{
+  font-family: 'Open Sans Condensed', sans-serif;       
+
+}
+
+#recent_posts-heading{
+  font-family: 'Open Sans Condensed', sans-serif;
+} 
+
+#recent_posts{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+ 
+
+#detail-body{
+  font-family: 'Raleway', sans-serif;
+}
+
+#post-list{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#CBV{
+
+  font-family: 'Raleway', sans-serif;
+}
+
+
+label{
+  font-family: 'Raleway', sans-serif;
+}
+

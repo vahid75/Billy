@@ -1,0 +1,88 @@
+{%extends  "chat/home.html"%}
+<title>{{e.title}}</title>
+{%block details%}
+
+
+<div class="pb-4 container-fluid ">
+ <div class="row">
+ 
+  <span class="col-md-4" id="post-title" style="display: inline-block ">
+    <div class="vl pl-1">
+      <span style="width: 100%">{{e.title}}</span>
+    </div>
+  </span>
+  
+
+<span class="col-md-3" style ="float:right" id="post-author">posted by:{{e.author}}</span>
+<span class="col-md-2"></span>
+
+  <span class="col-md-3" id="creation_date" style="float:center;" >creation date:{{e.creation_date}}</span>
+ </div>
+</div>
+   
+   <!-- <hr> -->
+  
+  
+  
+<div class="body_html mb-4 "  style="background-color: #F6F7F8;border-radius: 10px">
+  <div class="" style="padding-top: 25px" > 
+    <div id="detail-body">{{e.body_html|safe}}</div><br>
+  </div>
+</div>
+  
+
+
+
+<a href="{%url 'chat:postupdate' pk=e.pk %}"   title="edit the post" class=" btn btn-warning">Edit</a>
+
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+    Delete
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ALERT</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure to delete this post?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="{%url 'chat:deletepost' pk=e.pk %}" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="{%url 'chat:home'  %}" class="btn btn-success">HOME</a>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+   {%endblock details %}
+
+
