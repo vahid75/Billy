@@ -1,18 +1,5 @@
 .vscode/
-Python Django Full.Stack Web Developer/
-beston/
-django-docs-2.2-en/
-for_test/
-gitfile
-masoud/
-myblog.zip
-new/
-parctice.py
-poll.zip
-poll/
-q-1.py
-svg-login-form.zip
-svg-login-form/
+
 venv/
 
 billy.zip
@@ -23,7 +10,7 @@ former projects/
 **/__pycache__/
 **/migrations
 billy/database/
-billy/db.sqlite3
+db.sqlite3
 
 
 

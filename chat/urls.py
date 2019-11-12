@@ -41,6 +41,8 @@ urlpatterns = [
     path('notfound/',someview),
     path("register/",register,name="reg"),    
     path("logout/",logoutnlogin,name = "logout"),
+    
+
 
 
 ]

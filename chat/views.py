@@ -286,3 +286,4 @@ def logoutnlogin(request):
     Logout n login back
     """
     return logout_then_login(request,login_url = reverse('auth'))
+
