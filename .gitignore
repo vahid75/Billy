@@ -8,7 +8,7 @@ django-blog/chat/static/chat/popper.min.js
 former projects/
 **/__pycache__/
 **/migrations
-database/
+databases/
 db.sqlite3
 
 
