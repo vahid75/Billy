@@ -1,5 +1,8 @@
 {%extends  "chat/home.html"%}
+{% load comments %}
+
 <title>{{e.title}}</title>
+<div class="container-fluid">
 {%block details%}
 
 
@@ -67,6 +70,44 @@
 
   <a href="{%url 'chat:home'  %}" class="btn btn-success">HOME</a>  
 
+  
+  <div ">
+  <hr>
+  {% get_comment_count for e as comment_count %}
+  <li>{{ comment_count }} comments have been posted.</li>
+  {%get_comment_list for e as comment_list%}
+  {%for comment in comment_list %}
+ name: {{comment.user_name}} <br>
+ comment:{{comment.comment}}
+ {%endfor%}
+ <!-- <hr>    -->
+ {#{% get_comment_form for e as form %}#}
+<!-- A context variable called form is created with the necessary hidden
+fields, timestamps and security hashes -->
+
+  <!-- <form action="{% comment_form_target %}" method="post">
+    {#{% csrf_token %}#}
+    
+        {#{{ form }}#}
+    <table>
+    <tr>
+      <td colspan="2">
+        <input type="submit" name="submit" value="Post">
+        <input type="submit" name="preview" value="Preview">
+        <input type="hidden" name="next" value="{#{% url 'chat:home' %}#}" />
+      </td>
+    </tr>
+  </table>
+  </form> -->
+
+
+<hr>
+</div>
+<!-- --------------------------------- -->
+
+  
+  
+
 
 
 
@@ -86,3 +127,4 @@
    {%endblock details %}
 
 
+  </div>

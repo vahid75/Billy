@@ -3,6 +3,7 @@ from chat.models import Post
 from django.contrib import admin
 
 # Create your models here.
+
 class SearchKeyword(models.Model):
     keyword = models.CharField(max_length=50)
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
@@ -16,7 +17,12 @@ class SearchKeywordInline(admin.StackedInline):
     
     
 
+"""
+This model is a psudo base model that 'inline' model would edit in its admin page.
+It means both models in on single page.
+The included one named 'inline'. 
 
+"""
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug":("title",)}
     inlines=[

@@ -40,9 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles' ,   
     'search.apps.SearchConfig',
-     'chat.apps.ChatConfig',
-     'taggit'
+    'chat.apps.ChatConfig',
+    'taggit',
+    'django.contrib.sites',
+    'django_comments',
+    'authenticate.apps.AuthenticateConfig',
+    
+   
+    
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,7 +66,7 @@ ROOT_URLCONF = 'billy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +135,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/static/',
 ]
+
+SITE_ID = 1
+# Zidan.roony@yahoo.com
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = 'me@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'

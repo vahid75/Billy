@@ -5,6 +5,10 @@ from .models import SearchKeyword
 
 # Create your views here.
 
+""" 'q' is the search input name.
+Q objects is used for comparing querysets
+The search module is based on two presisures. first for cheching if the query is in body or title fields of Post and second for searching the query in each post keywords. 
+"""
 def search(request):
     query = request.GET.get('q',"")
     results = keyword_results= []

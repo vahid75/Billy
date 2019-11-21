@@ -4,4 +4,4 @@ from search.models import PostAdmin
 
 # Register your models here.
 admin.site.register(Post,PostAdmin)
-admin.site.register(Comment)
+# admin.site.register(Comments)
