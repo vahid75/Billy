@@ -1,6 +1,6 @@
 # django-blog
 
-a simple blog app in django 
+A simple blog app with Django framework
 
 
 ## Table of contents
@@ -10,8 +10,10 @@ a simple blog app in django
 
 
 ## General Info
-This repository is a very simple weblog app written in **Python3/Django**.Although this is a basic form of a weblog but it supports the regular features of a blog app such as Authentication and Authorization system(log the user in , log him out ,etc) using the django session framework and CRUD proccess(create,read,update and delete).
-The project has running on this link for online testing  http://vahid75.pythonanywhere.com/chat/login 
+This repository is a simple weblog app written in **Python3/Django**.Although this is a basic form of a weblog but it supports the regular features of a blog app such as Authentication and Authorization system(log the user in , log him out ,etc) using the django session framework and CRUD proccess(create,read,update and delete).
+
+
+The project has running on this link for online testing  http://vahid75.pythonanywhere.com/
 
 ---
 
@@ -21,6 +23,28 @@ The project has running on this link for online testing  http://vahid75.pythonan
 * **Bootstrap 4**
 
 ---
+
+
+
+
+
+
+---
+## Details
+
+
+This project devided to 3 main apps.
+* ** chat app**
+* ** authenticate** app
+* ** search** app
+Other apps such **taggit** is third party apps for preparing tags for a blog entry.
+**Chat** app is the core of this project that consists of models for blog posts and handling post create forms with ModelsForms.
+**Search** app is a app for search through post based on titles or every post keywords.
+**Authenticate** stand for authenticating users or creatning new users.  
+
+
+---
+
 
 ## Setup
 
@@ -44,9 +68,9 @@ If you want to run this app in your Django project , follow [add to your project
 
 - making a virtualenv named venv using 
 
-  ```virtualenv venv ```
+  ```virtualenv venv ```	
   
-- activate it using this step in UNIX os family
+- activate it using this step in UNIX os families
 
   ```source venv/bin/activate```
   
@@ -54,9 +78,10 @@ If you want to run this app in your Django project , follow [add to your project
 
   ```cd venv/bin/; ./activate```
   
-- install django 
+- install requirements 
+  
 
-  ```pip3 install Django==2.2.3```
+  ```pip3 install -r requirements.txt```
 
 - now clone the whole repository.
 - for UNIX systems in terminal type

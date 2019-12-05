@@ -1,12 +1,8 @@
-{%load static %}
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link rel="stylesheet" href="{% static 'chat/login.css' %}" >  <title>register 🐒</title>
+{% extends "base_auth.html" %}
+{% load static %}
+<title>{%block title%} register 🐒 {%endblock title%} </title> 
 
-</head>
+{%block body%} 
 <body>
         
         
@@ -45,4 +41,5 @@
         </div>
        
 </body>
+{%endblock body%}
 </html>

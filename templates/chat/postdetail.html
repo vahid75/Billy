@@ -1,7 +1,7 @@
 {%extends  "chat/home.html"%}
 {% load comments %}
 
-<title>{{e.title}}</title>
+<title>{%block title%} {{e.title}} {%endblock title%}</title>
 <div class="container-fluid">
 {%block details%}
 
@@ -121,10 +121,11 @@ fields, timestamps and security hashes -->
 
 
 
-
+{%block script%}
+{%endblock script%}
         
         
    {%endblock details %}
-
+   
 
   </div>
