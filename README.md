@@ -34,9 +34,9 @@ The project has running on this link for online testing  http://vahid75.pythonan
 
 
 This project devided to 3 main apps.
-* ** chat app**
-* ** authenticate** app
-* ** search** app
+* **chat app**
+* **authenticate app**
+* **search app**
 Other apps such **taggit** is third party apps for preparing tags for a blog entry.
 **Chat** app is the core of this project that consists of models for blog posts and handling post create forms with ModelsForms.
 **Search** app is a app for search through post based on titles or every post keywords.
