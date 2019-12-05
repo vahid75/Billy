@@ -15,21 +15,21 @@ This repository is a simple weblog app written in **Python3/Django**.Although th
 
 The project has running on this link for online testing  http://vahid75.pythonanywhere.com/
 
----
+
 
 ## Technologies
 * **Python 3**
 * **Django 2.2**
 * **Bootstrap 4**
 
----
 
 
 
 
 
 
----
+
+
 ## Details
 
 
@@ -43,7 +43,7 @@ Other apps such **taggit** is third party apps for preparing tags for a blog ent
 **Authenticate** stand for authenticating users or creatning new users.  
 
 
----
+
 
 
 ## Setup
