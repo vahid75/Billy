@@ -1,4 +1,4 @@
-# django-blog
+# Billy
 
 A simple blog app with Django framework
 
